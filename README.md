@@ -10,7 +10,7 @@ As a fallback, you can still use the unchanged "Export Character" function. This
 
 ## Security Note
 
-The script performs the following actions on your computer
+Compared with the original script, this version performs the following additional actions on your computer
 * Copying and overriding files
 * Editing prefabs and / or scenes in your Unity instance.
 
