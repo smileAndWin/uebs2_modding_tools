@@ -1,4 +1,3 @@
-﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -583,7 +582,7 @@ public class CharacterModSetup : MonoBehaviour
 
         foreach (var curr in gameObject.GetComponentsInChildren<SkinnedMeshRenderer>())
             if (curr.sharedMaterials.Length > 1)
-                throw new UnityException("Your SkinnedMeshRenderer in " + curr.name + " uses more than 1 material. This is not allowed in UEBS2 and would lead to the unit falling through the map. Use a 3D modelling tool to separate the meshes by material, e.g. 'Mesh>Separate>By Material' in Blender.");
+                Debug.LogWarning("Your SkinnedMeshRenderer in " + curr.name + " uses more than 1 material. This sometimes works fine in UEBS2, but might lead to the unit falling through the map. If that happens, you need to use a 3D modelling tool to separate the meshes by material, e.g. 'Mesh>Separate>By Material' in Blender.");
     }
 
     [ContextMenu("Exchange MeshRenderers")]
